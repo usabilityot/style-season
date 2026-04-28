@@ -42,7 +42,6 @@
 		<h1 class="masthead">Eddie Browser</h1>
 		<nav>
 			<ul>
-				<li class="seasons"><a href="Default">Default</a></li>
 				<li class="seasons"><a href="Spring" onclick="changeSeason(this); return false;">Spring</a></li>
 				<li class="seasons"><a href="Summer" onclick="changeSeason(this); return false;">Summer</a></li>
 				<li class="seasons"><a href="Fall" onclick="changeSeason(this); return false;">Fall</a></li>
@@ -100,10 +99,10 @@
 	</footer>
 	</main>
 	<script>
-		function changeSeason(element) {
+		function changeSeason(el) {
 		    // 1. 'element' is the <a> tag that was just clicked
 		    // 2. Scoop the href attribute (e.g., "winter")
-		    var season = element.getAttribute("href");
+		    var season = el.getAttribute("href");
 		
 		    // 3. Test the scoop!
 		    alert("The season is: " + season);

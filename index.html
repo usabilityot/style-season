@@ -112,17 +112,17 @@
 			const html = document.querySelector("html");
 			const banner = document.querySelector("header > h2");
 			const logo = document.getElementById("logo");
-			const logo = document.getElementById("wear");
+			const wear = document.getElementById("wear");
 
-			switch(season)
+			switch(season){
 				case "spring":
 					html.style.backgroundColor = "#2B7129";
 					banner.textContent = "Spring Forward!";
 
 				break;
 
-				logo.scr = "image/" + season + ".gif";
-				wear.scr = "image/" + season + "-wear.jpg";
+				logo.src = "image/" + season + ".gif";
+				wear.src = "image/" + season + "-wear.jpg";
 
 			} 
 			//season is the thing we match

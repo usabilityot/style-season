@@ -103,7 +103,7 @@
 		    // 1. 'element' is the <a> tag that was just clicked
 		    // 2. Scoop the href attribute (e.g., "winter")
 		    var season = el.getAttribute("href");
-		
+				season = season.toLowerCase();
 		    // 3. Test the scoop!
 		    //alert("The season is: " + season);
 

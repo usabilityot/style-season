@@ -42,10 +42,10 @@
 		<h1 class="masthead">Eddie Browser</h1>
 		<nav>
 			<ul>
-				<li class="seasons"><a href="Spring" onclick="changeSeason(this); return false;">Spring</a></li>
-				<li class="seasons"><a href="Summer" onclick="changeSeason(this); return false;">Summer</a></li>
-				<li class="seasons"><a href="Fall" onclick="changeSeason(this); return false;">Fall</a></li>
-				<li class="seasons"><a href="Winter" onclick="changeSeason(this); return false;">Winter</a></li>
+				<li class="seasons"><a href="#" onclick="changeSeason(this); return false;">Spring</a></li>
+				<li class="seasons"><a href="#" onclick="changeSeason(this); return false;">Summer</a></li>
+				<li class="seasons"><a href="#" onclick="changeSeason(this); return false;">Fall</a></li>
+				<li class="seasons"><a href="#" onclick="changeSeason(this); return false;">Winter</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -110,7 +110,7 @@
 			//let is a var. things in it can change. 
 			//select the background of the page
 			const html = document.querySelector("html");
-			const banner = document.querySelector("header > h2");
+			const banner = document.querySelector("h2");
 			const logo = document.getElementById("logo");
 			const wear = document.getElementById("wear");
 
@@ -118,32 +118,30 @@
 				case "spring":
 					html.style.backgroundColor = "#2B7129";
 					banner.textContent = "Spring Forward!";
-					logo.src = "images/" + spring + ".gif";
-					wear.src = "images/" + spring + "-wear.jpg";
-
-				break;
+					logo.src = "images/" + season + ".gif";
+					wear.src = "images/" + season + "-wear.jpg";
+					break;
 
 				case "summer":
 					html.style.backgroundColor = "#2B7129";
 					banner.textContent = "Summer is here!";
-					logo.src = "images/" + summer + ".gif";
-					wear.src = "images/" + summer + "-wear.jpg";
+					logo.src = "images/" + season + ".gif";
+					wear.src = "images/" + season + "-wear.jpg";
+					break;
 
-				break;
+				case "fall":
+        			html.style.backgroundColor = "#A81124";
+        			banner.textContent = "Fall Back!";
+					logo.src = "images/" + season + ".gif";
+					wear.src = "images/" + season + "-wear.jpg";
+        			break;
 
-				    case "fall":
-        html.style.backgroundColor = "#A81124";
-        banner.textContent = "Fall Back!";
-        logo.src = "images/fall.gif";
-        wear.src = "images/fall-wear.jpg";
-        break;
-
-    case "winter":
-        html.style.backgroundColor = "#005393";
-        banner.textContent = "Winter Wonderland!";
-        logo.src = "images/winter.gif";
-        wear.src = "images/winter-wear.jpg";
-        break;
+				case "winter":
+					html.style.backgroundColor = "#005393";
+					banner.textContent = "Winter Wonderland!";
+					logo.src = "images/" + season + ".gif";
+					wear.src = "images/" + season + "-wear.jpg";
+					break;
 
 
 			} 

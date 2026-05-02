@@ -61,7 +61,19 @@
 			<li>Winter: <b>#005393</b></li>
 		</ul>
 	</div>
-	<p><strong>How this works!</strong> Well, 
+	<p><strong>How this works!</strong> Well, metadata and styles and stylesheets are defined and linked in the "head". 
+		the "Header" contains the code the displays the logo and page tite. I'm still trying to wrap my brain around the 
+		links. on the click event the changeSeasons(this) function is called with the variable this ingesting the name of 
+		the link as the value. . . and I can see that the key that the value is associated with is the element. . . so 
+		for example "Spring" is scooped up then added to the variable "season", however, reading left to right, the word 
+		Spring is converted to lower case. Mine was not working the way you showed us in class, however, I think I'm understanding
+		how the el.textContent.toLowerCase(); is working. I think that el is the thing, and .textContent is a class 
+		and .toLowerCase(); is a built in function in the textContent class. . . then constants are created as variables
+		There is a lot I don't get yet on the const html = document.querySelector("html"); I'm not sure what const really
+		means vs other types of variables. I'm not clear on details of how the DOM works. I generally understand that 
+		this is what changes the elements on the page. . . and then the switch ingestes the value of season and reassigns
+		the respective values. I am not understanding the console.log("The season is: " + season); line of code. I think 
+		it may have something to do with switching back to the default page, but I can't remember lol. 
 	<p>
 	<img src="images/300x400.png" alt="Season Wear Goes Here" id="wear">
 	</p>

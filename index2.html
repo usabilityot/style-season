@@ -1,0 +1,189 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Spring Demo</title>
+
+    <style>
+        /* Style for the page heading */
+        .masthead {
+            font-size: 3em;
+        }
+
+        /* Style for the logo image */
+        #logo {
+            max-width: 100px;
+        }
+
+        /* Style for the clothing image */
+        #wear {
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE HEADER -->
+    <header>
+
+        <!-- This image will change when the link is clicked -->
+        <img src="images/four-seasons.gif"
+             alt="Season Logo"
+             id="logo">
+
+        <h1 class="masthead">Eddie Browser</h1>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+
+                <!-- 
+                    When this link is clicked:
+                    1. changeSeason(this) runs
+                    2. "this" means "the link that was clicked"
+                    3. return false stops the browser from loading a new page
+                -->
+                <li>
+                    <a href="#"
+                       onclick="changeSeason(this); return false;">
+                        Spring
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main>
+
+        <!-- This heading text will change with JavaScript -->
+        <h2>Outfitter for All Seasons!</h2>
+
+        <p>
+            Click the Spring link to change the page colors and images.
+        </p>
+
+        <!-- This image will change when Spring is clicked -->
+        <img src="images/300x400.png"
+             alt="Season Wear"
+             id="wear">
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        /*
+            FUNCTION
+
+            A function is a reusable block of code.
+
+            This function runs when the Spring link is clicked.
+        */
+        function changeSeason(el) {
+
+            /*
+                VARIABLE
+
+                A variable stores information.
+
+                "season" stores the text inside the clicked link.
+
+                If the link says:
+                Spring
+
+                then season becomes:
+                "spring"
+            */
+            var season = el.textContent.toLowerCase();
+
+
+
+            /*
+                These variables store parts of the page.
+
+                We are "selecting" elements from the HTML
+                so JavaScript can change them.
+            */
+
+            /* Select the whole page */
+            const html = document.querySelector("html");
+
+            /* Select the h2 heading */
+            const banner = document.querySelector("h2");
+
+            /* Select the logo image */
+            const logo = document.getElementById("logo");
+
+            /* Select the clothing image */
+            const wear = document.getElementById("wear");
+
+
+
+            /*
+                IF STATEMENT
+
+                This checks:
+                "Is the season equal to spring?"
+
+                If YES:
+                run the code inside the braces { }
+            */
+            if (season === "spring") {
+
+                /* Change the background color */
+                html.style.backgroundColor = "#2B7129";
+
+                /* Change the heading text */
+                banner.textContent = "Spring Forward!";
+
+                /*
+                    Change the logo image
+
+                    This builds the file path:
+
+                    "images/" + season + ".gif"
+
+                    becomes:
+
+                    "images/spring.gif"
+                */
+                logo.src = "images/" + season + ".gif";
+
+
+
+                /*
+                    Change the clothing image
+
+                    This becomes:
+
+                    "images/spring-wear.jpg"
+                */
+                wear.src = "images/" + season + "-wear.jpg";
+            }
+
+
+
+            /*
+                Console log
+
+                Sends information to the browser console.
+
+                Helpful for testing and debugging.
+            */
+            console.log("The season is: " + season);
+        }
+
+    </script>
+
+</body>
+</html>
+```
